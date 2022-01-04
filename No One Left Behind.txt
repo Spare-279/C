@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main(){
+	int a,m;
+	printf("How many people do live with you today?\n");
+	scanf("%ld",&m);
+	if(m>0){
+		printf("\nYou are never lonely!Have a nice holiday!\n");
+	}else{
+		printf("\nDo you have family who can talk today with you? \nYes:1   No:The other number\n");
+		scanf("%ld",&m);
+		if(m==1){
+			printf("\nYou are never lonely! Have a nice holiday!\n");
+		}else{
+			printf("\nDo you have friends in the Internet? \nYes:1   No:The other number\n");
+			scanf("%ld",&m);
+			if(m==1){
+				printf("\nYou are never lonely!Have a nice holiday!\n");
+			}else{
+				printf("\nProbably,You have friends,aren't you?\n\nYes:1key    No:Otherkey\n");
+				scanf("%ld",&m);
+				if(m==1){
+					printf("\nYes! You are never lonely! \n Have a nice holiday!");
+				}else{
+					printf("\nNo? No! You surely have friends!\n\n/*お好みのURLからhttps://を除いた部分*/\n\nCopy and paste this URL in the adressbar of your favorite browser and Go to the page !\nIf you go to the page,push 1key.\n");
+					do{
+						scanf("%ld",&m);
+						if(m!=1){
+							m=0;
+							printf("Go to URL's page ASAP!\n");
+						}
+					}while(m!=1);
+					printf("\nThis is last question.\n\n     Are you lonely?\n\nYes:Otherkey    No:0key\n\nYour opinion is ");
+					scanf("%ld",&m);
+					if(m==0){
+						printf("\nYes! We are already friends! Let's enjoy the holidays!\n");
+					}else{
+						printf("\nOh..I see..Ok.Shall we be a friend and enjoy holidays with me?\n");
+					}
+				}
+			}
+		}
+		
+	}
+}
